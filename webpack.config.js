@@ -3,6 +3,12 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV;
 const IS_DEV = NODE_ENV === 'development';
+const IS_PROD = NODE_ENV === 'production';
+
+function setupDevtool() {
+    if(IS_DEV) return 'eval';
+    if(IS_PROD) return false;
+}
 
 module.exports = {
     // Для обучения резолвить другие расширения.
@@ -44,12 +50,20 @@ module.exports = {
         }]
     },
 
+    // Для копирования файла и модификации этого файла на лету.
     plugins:[
         new HTMLWebpackPlugin({ template: path.resolve(__dirname, 'index.html') })
     ],
+    
+    // Чтобы подлялся, минимально неоходимо 3 настройки.
     devServer: {
         port: 3000,
         open: true,
+        
+        // Перезагружает странциу когда что-то меняется в файлах.
         hot: IS_DEV
-    }
+    },
+
+    // Фирмируются ли и как формируются сорцмапы.
+    devtool: setupDevtool()
 };
