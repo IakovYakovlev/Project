@@ -13,9 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "unique-names-generator": "^4.7.1"
   },
   "devDependencies": {
+    "@types/react": "^18.0.14",
     "html-webpack-plugin": "^3.2.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.3",

@@ -238,7 +238,7 @@ eval("\nif (false) {}\nelse {\n    module.exports = __webpack_require__(/*! ./cj
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nfunction Header() {\n    return (React.createElement(\"header\", { id: \"react_root\" },\n        React.createElement(\"h1\", null, \"Reddit for our own\")));\n}\nexports.Header = Header;\n\n\n//# sourceURL=webpack:///./src/Header.jsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nfunction Header() {\n    return (react_1.default.createElement(\"header\", null,\n        react_1.default.createElement(\"h1\", null, \"Hello React\")));\n}\nexports.Header = Header;\n\n\n//# sourceURL=webpack:///./src/Header.jsx?");
 
 /***/ }),
 
@@ -250,7 +250,7 @@ eval("\nvar __importStar = (this && this.__importStar) || function (mod) {\n    
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst react_dom_1 = __importDefault(__webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\"));\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/Header.jsx\");\nwindow.addEventListener('load', () => {\n    react_dom_1.default.render(React.createElement(Header_1.Header, null), document.getElementById('react_root'));\n});\n\n\n//# sourceURL=webpack:///./src/index.jsx?");
+eval("\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nconst ReactDOM = __importStar(__webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\"));\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/Header.jsx\");\nwindow.addEventListener('load', () => {\n    ReactDOM.render(React.createElement(Header_1.Header, null), document.getElementById('react_root'));\n});\n\n\n//# sourceURL=webpack:///./src/index.jsx?");
 
 /***/ })
 
