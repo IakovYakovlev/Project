@@ -3,7 +3,7 @@ import React from 'react';
 export function Header() {
     return (
         <header>
-            <h1>Hello React</h1>
+            <h1>Reddit for our own</h1>
         </header>
     );
 }

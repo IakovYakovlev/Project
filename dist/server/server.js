@@ -81,66 +81,66 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/server/server.js");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ "./src/server/server.js":
+/*!******************************!*\
+  !*** ./src/server/server.js ***!
+  \******************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(__webpack_require__(1));
-const server_1 = __importDefault(__webpack_require__(2));
-const Header_1 = __webpack_require__(3);
-const app = express_1.default();
-app.get('/', (req, res) => {
-    res.send(server_1.default.renderToString(Header_1.Header()));
-});
-app.listen(3000, () => {
-    console.log('server started on http://localhost:3000');
-});
-
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\nconst server_1 = __importDefault(__webpack_require__(/*! react-dom/server */ \"react-dom/server\"));\nconst Header_1 = __webpack_require__(/*! ../shared/Header */ \"./src/shared/Header.jsx\");\nconst app = express_1.default();\napp.get('/', (req, res) => {\n    res.send(server_1.default.renderToString(Header_1.Header()));\n});\napp.listen(3000, () => {\n    console.log('server started on http://localhost:3000');\n});\n\n\n//# sourceURL=webpack:///./src/server/server.js?");
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
 
-module.exports = require("express");
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-dom/server");
-
-/***/ }),
-/* 3 */
+/***/ "./src/shared/Header.jsx":
+/*!*******************************!*\
+  !*** ./src/shared/Header.jsx ***!
+  \*******************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(__webpack_require__(4));
-function Header() {
-    return (react_1.default.createElement("header", null,
-        react_1.default.createElement("h1", null, "Hello React")));
-}
-exports.Header = Header;
-
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nfunction Header() {\n    return (react_1.default.createElement(\"header\", null,\n        react_1.default.createElement(\"h1\", null, \"Reddit for our own\")));\n}\nexports.Header = Header;\n\n\n//# sourceURL=webpack:///./src/shared/Header.jsx?");
 
 /***/ }),
-/* 4 */
+
+/***/ "express":
+/*!**************************!*\
+  !*** external "express" ***!
+  \**************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("react");
+eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///external_%22express%22?");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react\");\n\n//# sourceURL=webpack:///external_%22react%22?");
+
+/***/ }),
+
+/***/ "react-dom/server":
+/*!***********************************!*\
+  !*** external "react-dom/server" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react-dom/server\");\n\n//# sourceURL=webpack:///external_%22react-dom/server%22?");
 
 /***/ })
-/******/ ]);
+
+/******/ });
