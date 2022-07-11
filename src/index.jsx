@@ -8,9 +8,9 @@ import { StarWarsNameFunction } from './shared/StateExamples/StarWarsNameFunctio
 //     ReactDOM.render(<Header />, document.getElementById('react_root'));
 // });
 
-// window.addEventListener('load', () => {
-//     ReactDOM.render(<StarWarsNameClass />, document.getElementById('react_root'));
-
 window.addEventListener('load', () => {
-    ReactDOM.render(<StarWarsNameFunction />, document.getElementById('react_root'));
+    ReactDOM.render(<StarWarsNameClass />, document.getElementById('react_root'));
+
+// window.addEventListener('load', () => {
+//     ReactDOM.render(<StarWarsNameFunction />, document.getElementById('react_root'));
 });
