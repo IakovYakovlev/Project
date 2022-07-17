@@ -1,6 +1,6 @@
 import React from 'react';
 import { starWars, uniqueNamesGenerator } from 'unique-names-generator';
-//import styles from './starWarsNameClass.css';
+import styles from './starWarsNameClass.css';
 
 interface IStarWarsNameClassState{
   name: string;
@@ -27,9 +27,9 @@ export class StarWarsNameClass extends React.PureComponent<{}, IStarWarsNameClas
       //   <button className={styles.button}>Мне нужно имя</button>
       // </section>
       <section>
-        <span>{this.state.name}</span>
+        <div className={styles.examples}>{this.state.name}</div>
         <div />
-        <button onClick={this.handleClick}>Мне нужно имя!</button>
+        <button className={styles.examples} onClick={this.handleClick}>Мне нужно имя!</button>
       </section>
     );
   }

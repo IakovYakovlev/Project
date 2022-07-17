@@ -4,6 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV;
 const IS_DEV = NODE_ENV === 'development';
 const IS_PROD = NODE_ENV === 'production';
+const GLOBAL_CSS_REGEXP = /\.global\.css$/;
 
 function setupDevtool() {
     if(IS_DEV) return 'eval';
@@ -13,7 +14,7 @@ function setupDevtool() {
 module.exports = {
     // Для обучения резолвить другие расширения.
     resolve:{
-        extensions:['.js', '.jsx', '.ts', '.tsx', '.json']
+        extensions:['.js', '.jsx',  '.json', '.ts', '.tsx']
     },
 
     // Значение mode принимает строку, в которой будет значение либо development либо production
@@ -41,13 +42,34 @@ module.exports = {
     // Внутри массива мы и будем настраивать все loaderi которые используем.
     // Для минимальной настрокий loadera необходимы 2 свойства test and .
     module: {
-        rules: [{
-            // Регулярное выражение, в котором описываем рассширения файлов, которые мы собираемся обрабатывать.
-            test: /\.[tj]sx?$/,
+        rules: [
+				{
+					// Регулярное выражение, в котором описываем рассширения файлов, которые мы собираемся обрабатывать.
+					test: /\.[tj]sx?$/,
 
-            // Даем команду, что для обработки нужно использовать ts-loader.
-            use: ['ts-loader']
-        }]
+					// Даем команду, что для обработки нужно использовать ts-loader.
+					use: ['ts-loader']
+        },
+				{
+					test: /\.css$/,
+					use: [
+						'style-loader', {
+						loader: 'css-loader',
+							options: {
+								modules: {
+									mode: 'local',
+									localIdentName: '[name]__[local]--[hash:base64:5]',
+								}
+							}
+						}
+					],
+					exclude: GLOBAL_CSS_REGEXP
+				},
+				{
+					test: GLOBAL_CSS_REGEXP,
+					use: ['style-loader', 'css-loader']
+				}
+			]
     },
 
     // Для копирования файла и модификации этого файла на лету.
