@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './controlscomponent.css';
+import styles from './postbutto.css';
 
-export function ControlsComponent() {
+export function PostButto() {
   return (
 	<div className={styles.menu}>
 		<button className={styles.menuButton}>

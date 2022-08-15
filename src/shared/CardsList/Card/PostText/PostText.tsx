@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './textcomponent.css';
+import styles from './posttext.css';
 
-export function TextComponent() {
+export function PostText() {
   return (
 		<div className={styles.textContent}>
 			<div className={styles.userLink}>

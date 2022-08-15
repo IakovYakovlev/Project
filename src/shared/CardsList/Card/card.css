@@ -10,26 +10,14 @@
 	order: 2;
 }
 
-.img {
+.thumbnail {
 	order: 1;
 }
 
-.author {
+.karma {
 	order: 3;
 }
 
-.postingTime {
+.button {
 	order: 4;
-}
-
-.comments {
-	order: 5;
-}
-
-.like {
-	order: 6;
-}
-
-.controls {
-	order: 7;
 }

@@ -1,7 +1,7 @@
 import React, {Component, PropsWithChildren} from 'react';
-import styles from './imgcomponent.css';
+import styles from './postthumbnail.css';
 
-export function ImgComponent() {
+export function PostThumbnail() {
   return (
 		<div className={styles.preview}>
 			<img

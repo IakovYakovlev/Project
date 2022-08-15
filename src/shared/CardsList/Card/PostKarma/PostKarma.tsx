@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './likecomponent.css';
+import styles from './postkarma.css';
 
-export function LikeComponent() {
+export function PostKarma() {
   return (
 		<div className={styles.karmaCounter}>
 			<button className={styles.up}>
