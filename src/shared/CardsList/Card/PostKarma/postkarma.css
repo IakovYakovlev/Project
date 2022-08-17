@@ -1,6 +1,7 @@
 .karmaCounter {
-	height: 100%;
+	order: 3;
 	display: flex;
+	margin-right: 5px;
 	flex-direction: column;
 	width: 40px;
 	justify-content: center;

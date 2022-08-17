@@ -1,4 +1,5 @@
 	.textContent {
+		order: 2;
 		display: flex;
 		flex-flow: row wrap;
 		padding: 22px 20px 13px;

@@ -1,4 +1,5 @@
 .preview {
+	order: 1;
 	height: 178px;
 	width: 300px;
 }

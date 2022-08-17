@@ -1,7 +1,7 @@
 .menu {
+	order: 4;
 	margin-right: 10px;
 	display: flex;
-	height: 100%;
 	width: 40px;
 	justify-content: center;
 	align-items: center;

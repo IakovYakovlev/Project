@@ -5,19 +5,3 @@
 	flex-flow: row nowrap;
 	position: relative;
 }
-
-.text {
-	order: 2;
-}
-
-.thumbnail {
-	order: 1;
-}
-
-.karma {
-	order: 3;
-}
-
-.button {
-	order: 4;
-}

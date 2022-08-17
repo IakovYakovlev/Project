@@ -8,10 +8,10 @@ import { PostButto } from './PostButto';
 export function Card() {
   return (
 		<li className={styles.card}>
-			<div className={styles.thumbnail}><PostThumbnail /></div>
-			<div className={styles.text}><PostText /></div>
-			<div className={styles.karma}><PostKarma /></div>
-			<div className={styles.button}><PostButto /></div>
+			<PostThumbnail />
+			<PostText />
+			<PostKarma />
+			<PostButto />
 		</li>
   );
 }
